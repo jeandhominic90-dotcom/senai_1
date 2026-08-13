@@ -1,3 +1,4 @@
+portugol/ 
 programa {
   funcao inicio() {
     // dados - variaveis
