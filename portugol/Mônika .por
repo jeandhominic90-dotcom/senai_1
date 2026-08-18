@@ -14,6 +14,6 @@ programa
 		chance = (0.1 / (1 + 500 * n)) * 100
 
 		// apresentar os resultado
-		escreva("\nA chance de aprovação do candidato é de: ", chance, "%\n")
+		escreva("A chance de aprovação do candidato é de: ", chance, "%")
 	}
 }
