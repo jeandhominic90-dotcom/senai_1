@@ -20,7 +20,7 @@ programa
 		// Cálculo da porcentagem de lucro sobre os custos/investimento
 		lucro_percentual = (lucro_reais / suprimentos) * 100
 
-		escreva("\nLucro em Reais: R$ ", lucro_reais)
-		escreva("\nLucro Percentual: ", lucro_percentual, "%\n")
+		escreva("Lucro em Reais: R$ ", lucro_reais)
+		escreva("Lucro Percentual: ", lucro_percentual, "%")
 	}
 }
