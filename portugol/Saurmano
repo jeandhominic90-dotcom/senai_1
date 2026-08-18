@@ -14,7 +14,7 @@ programa
 		total_bombas = shows * 7
 		custo_total = total_bombas * preco_unitario
 
-		escreva("\nTotal de bombas de fumaça necessárias: ", total_bombas)
-		escreva("\nDinheiro necessário para comprar: R$ ", custo_total, "\n")
+		escreva("Total de bombas de fumaça necessárias: ", total_bombas)
+		escreva("Dinheiro necessário para comprar: R$ ", custo_total, "")
 	}
 }
