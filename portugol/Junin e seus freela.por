@@ -13,7 +13,7 @@ preco_cobrado = 500.0 + (horas_estimadas * 350.0)
 // Como R$ 500 vai direto para o consultor Denis Nery, o lucro do Junin é o valor do seu trabalho
 lucro = horas_estimadas * 350.0
 
-escreva("\nPreço a cobrar do cliente: R$ ", preco_cobrado)
-escreva("\nLucro líquido do Junin: R$ ", lucro, "\n")
+escreva("Preço a cobrar do cliente: R$ ", preco_cobrado)
+escreva("Lucro líquido do Junin: R$ ", lucro, )
 }
 }
