@@ -11,6 +11,6 @@ leia(gramas)
 quilos = gramas / 1000
 preco_total = quilos * 10.0
 
-escreva("\nPreço total a pagar: R$ ", preco_total, "\n")
+escreva("Preço total a pagar: R$ ", preco_total, ")
 }
 }
