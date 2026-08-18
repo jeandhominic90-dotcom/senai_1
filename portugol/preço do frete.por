@@ -20,6 +20,6 @@ programa
 
 		
 	  // apresentar os resultado
-		escreva("\nO preço total do frete é: R$ ", frete)
+		escreva("O preço total do frete é: R$ ", frete)
 	}
 }
