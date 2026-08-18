@@ -14,6 +14,6 @@ custo_transporte = caminhoes * 450.0
 
 lucro = faturamento - custo_transporte
 
-escreva("\nLucro da temporada de vendas: R$ ", lucro, "\n")
+escreva("Lucro da temporada de vendas: R$ ", lucro, ")
 }
 }
