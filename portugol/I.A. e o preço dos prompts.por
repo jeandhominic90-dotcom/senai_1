@@ -14,7 +14,7 @@ leia(custo_token)
 total_tokens = 5 + caracteres
 preco_reais = total_tokens * custo_token
 
-escreva("\nTotal de tokens gastos: ", total_tokens)
-escreva("\nCusto em Reais: R$ ", preco_reais, "\n")
+escreva("Total de tokens gastos: ", total_tokens)
+escreva("Custo em Reais: R$ ", preco_reais,)
 }
 }
