@@ -13,10 +13,10 @@ cerveja = pessoas * 1.0
 agua = pessoas * 0.5
 refri = pessoas * 0.2
 
-escreva("\n--- Quantidades necessárias ---")
-escreva("\nCarne: ", carne, " kg")
-escreva("\nCerveja: ", cerveja, " L")
-escreva("\nÁgua: ", agua, " L")
-escreva("\nRefrigerante: ", refri, " L\n")
+escreva("--- Quantidades necessárias ---")
+escreva("Carne: ", carne, " kg")
+escreva("Cerveja: ", cerveja, " L")
+escreva("Água: ", agua, " L")
+escreva("Refrigerante: ", refri, " L")
 }
 }
