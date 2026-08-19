@@ -13,7 +13,7 @@ cerveja = pessoas * 1.0
 agua = pessoas * 0.5
 refri = pessoas * 0.2
 
-escreva("--- Quantidades necessárias ---")
+escreva(" Quantidades necessárias ")
 escreva("Carne: ", carne, " kg")
 escreva("Cerveja: ", cerveja, " L")
 escreva("Água: ", agua, " L")
