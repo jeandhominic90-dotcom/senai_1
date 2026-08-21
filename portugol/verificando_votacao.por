@@ -6,7 +6,7 @@ programa {
         leia(idade)
 
         se (idade >= 16) {
-            escreva("Você é elegível para votar.\n")
+            escreva("Você pode votar.\n")
         } senao {
             escreva("Você ainda não pode votar.\n")
         }
