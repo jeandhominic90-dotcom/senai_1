@@ -1,3 +1,68 @@
+function dia_da_semana(){
+    //entedimento
+    // o ususario tem que inserir um numero de 1 a 7
+    
+    // infor/variaveis
+    let numero
+
+    // ler os dados
+    numero = Number(prompt("Digita o dia da semana"))
+
+    //processamento
+    if(numero == 1){
+        alert("Domingo")
+       }else if(numero == 2){
+        alert("Segunda")
+       }else if(numero == 3){
+        alert("Terça")
+       }else if (numero == 4){
+        alert("Quarta")
+       }else if(numero == 5){
+        alert("Quinta")
+       }else if (numero == 6){
+        alert("Sexta")
+       }else if(numero == 7){
+        alert("Sábado")
+       }
+      
+}
+
+function verificarSenha(){
+    // entedimento
+    //  jean este programa pede para o usuario digitar a senha  for "abracadabra"e exiba a mensagem      secreta.
+// infos e variaveis
+    // Rafael
+    let senha
+
+    // processamento
+    senha = (prompt("Qual é a senha? "))
+    // saida
+      //felipe
+      if(senha == "abracadabra"){
+        prompt("meus parabens!")
+      }else{
+        prompt("senha incorreta.")
+      }
+}
+
+
+
+function verificarMaioridade(){
+// entendimento 
+        // O programa de ve ler a idade de uma pessoa se ele e maior ou mmenor
+// infos e variaveis 
+    let idade 
+// leitura de dados
+  idade =  Number(prompt("Digite sua idade"))
+// processamento
+if(idade >= 18){
+     alert("maior de idade")
+}else{
+    alert("menor de idade")
+}
+
+}
+    
 
 function CalclarLucroDoGanso(){
     // entedimento
