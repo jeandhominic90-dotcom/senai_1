@@ -1,14 +1,53 @@
+function controle_Tripulacao(){
+  // entedimento
+  //O Capitão Ganso, lenda viva das águas de Canasvieiras, precisa organizar o estoque de provisões de sua escuna antes de zarpar. Seus cálculos consideram a quantidade de marujos e a quantidade de comida necessária para o dia.
+
+  // infos e variaveis
+  let numeroMarujos
+  let qtd_comida
+
+  // lei tura de dados
+  numeroMarujos = Number(prompt("Digite o numero de marujos:"))
+  qtd_comida = Number(prompt("Digite a quantidade de comida em Kg:"))
+
+  //processamento
+  // saida
+  if(numeroMarujos >= 10 && qtd_comida >= 1.5 ){
+    alert("Provisões suficientes. Rumo ao horizonte!")
+  }else{
+    alert("Algo está errado. Posseidom não quer ninguém no mar hoje.")
+  }
+
+}
+
+
+
+function verifica_votacao(){
+  //Peça ao usuário para inserir sua idade e verifique se ele é elegível para votar (idade mínima de 16 anos)
+  let idade
+
+  idade = Number(prompt("Digite sua idade"))
+
+  if(idade >= 16){
+    alert("você pode votar")
+  }else{
+    alert("você não pode votar")
+  }
+}
+
+
 function dia_da_semana(){
     //entedimento
-    // o ususario tem que inserir um numero de 1 a 7
+    // o ususario tem que inserir um numero de 1 a 7 e mostar o dia da semana correspondente
     
     // infor/variaveis
     let numero
 
     // ler os dados
-    numero = Number(prompt("Digita o dia da semana"))
+    numero = Number(prompt("Digita o dia da semana:"))
 
     //processamento
+    //saida
     if(numero == 1){
         alert("Domingo")
        }else if(numero == 2){
