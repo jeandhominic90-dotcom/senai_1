@@ -1,58 +1,90 @@
-function verificar_Liberacao_Jaulas(){
-  // O sistema de liberação de jaulas funciona com base em dois critérios de segurança: o número de visitantes na área precisa ser **zero** e o horário precisa estar **fora do expediente de visitação** (antes das 8h ou depois das 18h). A liberação automática só deve ocorrer se **ambas** as condições forem verdadeiras.Durante um teste de rotina, alguns funcionários relataram que as jaulas estavam sendo abertas fora do horário correto, colocando todos em risco. Denis Nery encarregou Junin de revisar esse trecho da lógica com atenção.
+function calcular_numero_De_Diarias(){
+// entedimento 
+// O programa deve ler o número de dias que vai ficar no albergue e presentar  o valor final da compoosição. O  valor da diaria depende de quantos dis ficou. tem desconto  e multa.
 
-  // infos e variaveis
-  let visitantesNaArea
-  let horaAtual
+// info e variavesi
+let qtd_dias, valorDiaria
+let totalBruto, descontos10,descontop15, totalpagar
+let multa = 150
 
-  // leitura de dados
-  visitantesNaArea = Number(prompt("Digite o número de visitantes na área:"))
-  horaAtual = Number(prompt("Digite a hora atual (0 a 23):"))
+// entrada de dados
+qtd_dias = Number(prompt("Digite a quantidade de dias que vai ficar:"))
 
-  // processamento e saida 
-  if (visitantesNaArea == 0 && horaAtual) {
-        alert("Liberação autorizada. Abrindo jaula.")
-    } else {
-        alert("Liberação negada. Área em uso ou fora do horário permitido.")
-    }
+// processamento
+  if(qtd_dias <= 5){
+    valorDiaria = 100
+  }else if(qtd_dias <= 10){
+    valorDiaria = 90
+  }else{
+    valorDiaria = 80
+  }
+
+  totalBruto = qtd_dias * valorDiaria
+  descontos10 = totalBruto * 10/100
+  descontp15 =  totalBruto * 15/100
+  totalpagar = totalBruto - (descontos10 + descontop15) + multa
+
+// saida
+
 
 }
 
 
+
+function verificar_Liberacao_Jaulas(){
+  //entendimento
+  // O sistema de jaulas funciona com base em dois critérios de segurança: o número de visitantes na área precisa ser zero e o horário precisa estar fora do expediente de visitação (antes das 8h ou depois das 18h).
+
+  // infos e variaveis
+ let visitantesNaArea, HoraAtual
+
+ // entrada de dados
+ visitantesNaArea = Number("Digite quantos visistantem tem na area:")
+ HoraAtual = Number("Digite qual é o Horario atual? (0 a 23)") 
+
+ //processamento e saida
+ if(visitantesNaArea == 0 && (HoraAtual < 8 || hora>18)){
+  alert("Liberação autorizada. Abrindo jaula.")
+ }else{
+  alert("Liberação negada. Área em uso ou fora do horário permitido.")
+ }
+
+}
+
 function verificar_Acesso_Comando(){
   // enetdimento
-  // Denis Nery é especialista no desenvolvimento de softwares para parques. A maioria dos parques possui um Centro de Comando que controla os principais sistemas de segurança. Apenas funcionários com autorização especial podem acessá-lo. Para ter a autorização especial, o funcionário precisa estar com o crachá válido e a digital reconhecida. Caso o crachá não esteja válido ou a digital falhar, o acesso deve ser negado imediatamente. 
+  // verifacar se o usuario tem crachá valida e a digital cadastada para poder liberar o aceso ao centro de comando
 
-    // Infos e variáveis
-    let crachaValido;
-    let digitalReconhecida;
-    
-    // Leitura de dados (Padronizando para minúsculas)
-    crachaValido = prompt("Crachá está válido?").
-    digitalReconhecida = prompt("Digital reconhecida? ")
+  // infos e variaveis
+  let crachavalido, digitalReconhecida
+  // entrada de dodos
+  crachavalido = confirm("Tem crachá valido")
+  digitalReconhecida = confirm("Tem digilat reconhecida")
+  console.log(crachavalido)
+  // processamento e saida
+  if(crachavalido == true && digitalReconhecida == true){
+    alert("Acesso liberado")
+  }else{
+    alert("acesso invalido")
+  }
 
-    // Processamento e saída
-    if (crachaValido == "sim" && digitalReconhecida == "sim") {
-        alert("Acesso permitido.");
-    } else {
-        alert("Acesso negado.");
-    }
+   
 }
 
 function verificar_Transporte(){
   // entedimento
-  //O parque tem um sistema de transporte que liga as principais estações. O uso do transporte depende de duas variáveis: se há **manutenção ativa** e se o **nível de emergência do parque** está alto. O transporte **só pode funcionar se não estiver em manutenção e não houver emergência** Recentemente, um grupo de visitantes ficou preso durante uma simulação de evacuação porque o sistema ativou o transporte mesmo com manutenção marcada. O objetivo agora é confirmar a lógica do controle de transporte.
+  // O sistema de transporte que liga as principais estações. O uso do transporte depende de duas variáveis: se há manutenção ativa e se o nível de emergência do parque está alto. O transporte só pode funcionar se não estiver em manutenção e não houver emergência.
 
   //  infos e variaveis
   let emManutencao
   let emergenciaAtiva
 
   // leitura de dados
-   manutencaoInput = prompt("Está em manutenção? (sim/nao)")
-   emergenciaInput = prompt("Emergência ativa? (sim/nao)")
+   manutencaoInput = prompt("Está em manutenção?")
+   emergenciaInput = prompt("Emergência ativa? ")
 
   //  processamento e saida
-  if (!emManutencao && !emergenciaAtiva) {
+  if (!emManutencao && emergenciaAtiva) {
         alert("Transporte liberado para uso.")
     } else {
         alert("Transporte indisponível por motivo de segurança.")
@@ -63,15 +95,15 @@ function verificar_Transporte(){
 
 function verificar_EntradaPalco(){
   // entendimento 
- // Sarumano, o mago ilusionista da periferia, se apresenta em festas infantis e eventos corporativos. Para entrar no palco principal e realizar seu número, ele precisa que o sistema de som esteja funcionando e que o figurino esteja completo (incluindo o chapéu que vive sendo esquecido no ônibus). Se uma dessas condições falhar, ele precisa improvisar no salão de entrada com truques menores.
+ //o mago ilusionista da periferia, se apresenta em festas infantis e eventos corporativos. Para entrar no palco principal e realizar seu número, ele precisa que o sistema de som esteja funcionando e que o figurino esteja completo (incluindo o chapéu que vive sendo esquecido no ônibus).
 
 // Infos e variáveis
 let somFuncionando;
 let figurinoCompleto;
 
 // leitura de dados
-somFuncionando = prompt("O som está funcionando? (sim/nao)")
-figurinoCompleto = prompt("O figurino está completo? (sim/nao)")
+somFuncionando = prompt("O som está funcionando? ")
+figurinoCompleto = prompt("O figurino está completo? ")
 
 // Processamento e saída
 if (somFuncionando == "sim" && figurinoCompleto === "sim") {
@@ -95,11 +127,11 @@ function verificar_Viagem() {
   let tempoViage
 
   // leitura de dados
-  estagripado = prompt("Está gripado? (sim/nao)").toLowerCase()
-  tempoViage = parseInt(prompt("Digite o tempo de viagem em minutos:"))
+  estagripado = confirm("Está gripado? ")
+  tempoViage = Number(prompt("Digite o tempo de viagem em minutos:"))
 
   // processamento e saida
-  if (estagripado == 'nao' && tempoViage < 45) {
+  if (estagripado == true && tempoViage < 45) {
     alert("Viagem autorizada. Rumo ao show!")
   } else {
     alert("Deslocamento inviável. Melhor recusar este evento.")
@@ -117,7 +149,7 @@ function verificar_Fumaca() {
   let velocidadeVento
 
   // leitura de dados
-  criancasPequenas = prompt("Digite a quantidade de crianças pequenas próximas:")
+  criancasPequenas = prompt("Digite a quantidade de crianças:")
   velocidadeVento = parseFloat(prompt("Digite a velocidade do vento (m/s):"))
 
   // processamento e saida
