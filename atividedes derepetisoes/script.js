@@ -1,3 +1,0 @@
-function senha(){
-    let senha 
-}
