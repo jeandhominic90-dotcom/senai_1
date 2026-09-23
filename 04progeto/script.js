@@ -18,7 +18,7 @@ const graficoRosca = new Chart(ctx, {
     data: {
         labels: ['Radicais', 'Família', 'Comida', 'Personagens', 'Zoológico'],
         datasets: [{
-            data: [10, 15, 8, 12, 20], // Valores de exemplo para o círculo aparecer logo!
+            data: [10, 15, 8, 12, 20], 
             backgroundColor: ['#e74c3c', '#3498db', '#f1c40f', '#9b59b6', '#2ecc71']
         }]
     },
@@ -49,17 +49,16 @@ btnCdastrar.addEventListener('click', function() {
         let subtotal = preco * quantidade;
         valorTotalGeral += subtotal;
 
-        // Atualiza o painel de resumo
+      
         totalProdutos.innerHTML = `
             <strong>Total de pessoas/itens:</strong> ${somatorioTotal} <br>
             <strong>Valor Total:</strong> R$ ${valorTotalGeral.toFixed(2)}
         `;
 
-        // Atualiza o gráfico de rosca na categoria correta (0 a 4)
+       
         graficoRosca.data.datasets[0].data[categoriaIndex] += quantidade;
         graficoRosca.update();
 
-        // Insere a linha na tabela
         let novaLinha = document.createElement('tr');
         novaLinha.innerHTML = `
             <td>${nome}</td>
@@ -71,7 +70,7 @@ btnCdastrar.addEventListener('click', function() {
         
         tabelaCorpo.appendChild(novaLinha);
 
-        // Limpa os inputs
+       
         nomeProdutoInput.value = '';
         descricaoInput.value = '';
         precoInput.value = '';
