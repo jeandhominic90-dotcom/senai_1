@@ -21,6 +21,25 @@
 // }
 // alert('total total:' + total + '\nQuantidade:' + qtd)
 
+function contagem(){
+let resultadoElemento = document.getElementById('resultados');
+let outro = "";
+
+for (let i = 10; i <= 1000; i++) {
+    
+    if ((i >= 10 && i <= 500) || (i >= 900 && i <= 1000)) {
+        if (outro === "") {
+            outro = i; 
+        } else {
+            outro = outro + ", " + i; 
+        }
+    }
+}
+
+
+resultadoElemento.innerHTML = outro;
+}
+
 
 
 let resultado = document.getElementById('resultado')
@@ -101,7 +120,7 @@ function ejercicio6(){
 function ejercicio7(){
     resultado.innerHTML = 'parte 1, eje7 <br>';
     
-    // Ordem crescente
+ 
     resultado.innerHTML += '<b>Crescente:</b><br>';
     let i = 1;
     while(i <= 10){
@@ -111,7 +130,7 @@ function ejercicio7(){
     
     resultado.innerHTML += '<br><br>';
     
-    // Ordem decrescente
+    e
     resultado.innerHTML += '<b>Decrescente:</b><br>';
     let j = 10;
     while(j >= 1){
