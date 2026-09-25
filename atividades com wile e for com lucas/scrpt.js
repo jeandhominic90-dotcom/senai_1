@@ -88,59 +88,57 @@ function idades() {
     alert("media das idades: " + soma_idades / 5 + "\nMaior idade: " + maiorIdade + "\nnome do Maior: " + maiorNome)
 }
 
-//5) Criar um programa que simule um jogo de cartas, onde inicialmente deve-se perguntar o nome do jogador 1 e o nome do jogador 2. Cada jogador tem 5 cartas para jogar. Inicia pelo jogador 1, em seguida o jogador 2, e assim segue alternando até que cada jogador tenha "jogado" suas 5 cartas. Os valores das cartas devem se digitados. Vence o jogador que tiver a maior soma. Ao final mostrar o nome do jogador vencedor e a sua soma. Caso tenha dado empate, mostrar mensagem na tela "O jogo empatou!". (DESAFIO: Aceitar somente cartas com valores entre 1 e 13, como no baralho).
 function jogo_cartas() {
-    let jogador_1
-    let jogador_2
-    let soma_1 = 0
-    let soma_2 = 0
-    let carta
+    let jogador_1 = prompt("Digite o nome do jogador 1: ");
+    let jogador_2 = prompt("Digite o nome do jogador 2: ");
+    let soma_1 = 0;
+    let soma_2 = 0;
+    let carta;
 
-    jogador_1 = prompt("Digite o nome do jogador 1: ")
-    jogador_2 = prompt("Digite o nome do jogador 2: ")
 
     for (let i = 1; i <= 5; i++) {
-        carta = Number((prompt("vez do jogador 1 : digite o valor da carta {i} (entre 1 , 13)")))
-        carta = Number((prompt("vez do jogador 2 : digite o valor da carta {i} (entre 1 , 13)")))
+        // --- Jogada do Jogador 1 ---
+        carta = Number(prompt(jogador_1 + ", digite o valor da carta " + i + " (entre 1 e 13):"));
 
-        if ((carta) || carta < 1 || carta > 13 && (carta) || carta < 1 || carta > 13) {
-            carta = Number((prompt("carta invalida! jogador 1, digite novamente a carta {i} (entre 1 ,13:carta invalida! jogador 2, digite novamente a carta {i} (entre 1 ,13:")))
-
-            soma_1 += carta
-            soma_2 += carta
+        while (carta < 1 || carta > 13 || isNaN(carta)) {
+            carta = Number(prompt("Carta inválida! " + jogador_1 + ", digite novamente a carta " + i + " (entre 1 e 13):"));
         }
+        soma_1 += carta;
+
+        // --- Jogada do Jogador 2 ---
+        carta = Number(prompt(jogador_2 + ", digite o valor da carta " + i + " (entre 1 e 13):"));
+
+        while (carta < 1 || carta > 13 || isNaN(carta)) {
+            carta = Number(prompt("Carta inválida! " + jogador_2 + ", digite novamente a carta " + i + " (entre 1 e 13):"));
+        }
+        soma_2 += carta;
     }
+
 
     if (soma_1 > soma_2) {
-        alert("o Jogo acabou!\nvencedor: jogador 1 com  a soma_1 " + soma_1)
+        alert("O jogo acabou!\nVencedor: " + jogador_1 + " com a soma de " + soma_1 + " pontos!");
     } else if (soma_2 > soma_1) {
-        alert("o Jogo acabou!\nvencedor: jogador 2  com a soma_2 " + soma_2)
+        alert("O jogo acabou!\nVencedor: " + jogador_2 + " com a soma de " + soma_2 + " pontos!");
     } else {
-        alert("O jogo enpatou!")
+        alert("O jogo empatou!");
     }
 }
-
 //6) Desenvolver um programa no qual o usuário digite o número de multas que deseja cadastrar e para cada multa deve colocar o valor em reais e os pontos perdidos na carteira de habilitação. Ao final, mostrar o somatório das multas e dos pontos, caso os pontos alcancem 21 ou mais, exibir a mensagem “Você está irregular”, senão, exibir “Você está regular”.
 function multa() {
-    let qtdMultas = parseInt(prompt("Quantas multas deseja cadastrar?"));
+    let qtdMultas = Number(prompt("Quantas multas deseja cadastrar?"));
     let totalValor = 0;
     let totalPontos = 0;
 
     for (let i = 1; i <= qtdMultas; i++) {
         let valor = Number(prompt(`Digite o valor em reais da multa ${i}:`));
-        let pontos = Number(prompt(`Digite os pontos perdidos na carteira para a multa ${i}:`))
+        let pontos = Number(prompt(`Digite os pontos perdidos na carteira para a multa ${i}:`));
+        
         totalValor += valor;
         totalPontos += pontos;
     }
 
     let statusCnh = totalPontos >= 21 ? "Você está irregular" : "Você está regular";
 
-    resultado.innerHTML = `Total das multas: R$ ${totalValor.toFixed(2)} \nTotal de pontos: ${totalPontos}\nStatus: ${statusCnh}`;
+    // Usando crases (template literals) e exibindo o total em reais formatado no alert
+    alert(`Total das multas: R$ ${totalValor}\nTotal de pontos: ${totalPontos}\nStatus: ${statusCnh}`);
 }
-
-
-
-
-
-
-
