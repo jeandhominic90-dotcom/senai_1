@@ -97,7 +97,7 @@ function jogo_cartas() {
 
 
     for (let i = 1; i <= 5; i++) {
-        // --- Jogada do Jogador 1 ---
+        // ---  Jogador 1 ---
         carta = Number(prompt(jogador_1 + ", digite o valor da carta " + i + " (entre 1 e 13):"));
 
         while (carta < 1 || carta > 13 || isNaN(carta)) {
@@ -105,7 +105,7 @@ function jogo_cartas() {
         }
         soma_1 += carta;
 
-        // --- Jogada do Jogador 2 ---
+         //-- Jogador 2 --
         carta = Number(prompt(jogador_2 + ", digite o valor da carta " + i + " (entre 1 e 13):"));
 
         while (carta < 1 || carta > 13 || isNaN(carta)) {
@@ -139,6 +139,6 @@ function multa() {
 
     let statusCnh = totalPontos >= 21 ? "Você está irregular" : "Você está regular";
 
-    // Usando crases (template literals) e exibindo o total em reais formatado no alert
+  
     alert(`Total das multas: R$ ${totalValor}\nTotal de pontos: ${totalPontos}\nStatus: ${statusCnh}`);
 }
