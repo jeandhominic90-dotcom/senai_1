@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Arrays</title>
 </head>
 <body>
 
-    <h1>Arrays</h1>
-    <button onclick="dias()">dias da semanna</button>
-    <button onclick="escreverNomes()"> escrever nomes</button>
-    <button onclick="testar()">teste</button>
-    <button onclick="testar1()">teste1</button>
-
-    <div id="listanomes">
-        lista de nomes:
+    <div class="container-botoes">
+        <button onclick="criarDiasSemana()">1. Criar Dias da Semana</button>
+        <button onclick="inverterDiasSemana()">2. Inverter Dias da Semana</button>
+        <button onclick="adicionarFeriadoSemana()">3. Adicionar 'Feriado'</button>
+        <button onclick="removerUltimoDiaSemana()">4. Remover Último Dia</button>
+        <button onclick="criarNumerosPares()">5. Criar Números Pares (2 a 20)</button>
+        <button onclick="substituirTerceiroPar()">6. Substituir 3º Elemento por 12</button>
+        <button onclick="adicionarMorango()">7. Adicionar 'morango'</button>
+        <button onclick="removerSegundaFruta()">8. Remover 2ª Fruta</button>
+        <button onclick="criarTresAmigos()">9. Criar Três Amigos</button>
+        <button onclick="concatenarMaisAmigos()">10. Concatenar Mais Amigos</button>
+        <button onclick="criarIdadesAmigos()">11. Criar Idades dos Amigos</button>
+        <button onclick="somarDuasIdades()">12. Somar Duas Primeiras Idades</button>
+        <button onclick="calcularMediaIdades()">13. Média das Idades</button>
+        <button onclick="criarCompras()">14. Criar Lista de Compras</button>
+        <button onclick="adicionarItensCompras()">15. Adicionar Itens em Compras</button>
+        <button onclick="removerTerceiroItemCompras()">16. Remover 3º Item</button>
+        <button onclick="verificarPaoCompras()">17. Verificar se tem 'Pão'</button>
+        <button onclick="criarImparesLoop()">18. Criar Ímpares com Loop</button>
+        <button onclick="multiplicarPorDois()">19. Multiplicar por 2</button>
+        <button onclick="criarFraseCidades()">20. Frase com Cidades</button>
     </div>
+
+    <hr>
     
-    <script src="./script.js"></script>
+    <div id="listaProdutos">
+        <!-- O resultado de cada exercício vai aparecer aqui de forma limpa -->
+    </div>
+
     <script src="./ejercicios.js"></script>
+    
 </body>
 </html>
