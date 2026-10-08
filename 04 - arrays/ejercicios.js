@@ -1,6 +1,4 @@
-O método join() `Arrayinstances` retorna uma nova string que é a concatenação de todos os elementos deste array, 
-    separados por vírgulas ou por uma string separadora especificada. Se o array tiver apenas um item, a string resultante desse item será retornada
-    sem o uso do separador.
+// O método join() `Arrayinstances` retorna uma nova string que é a concatenação de todos os elementos deste array,  separados por vírgulas ou por uma string separadora especificada. Se o array tiver apenas um item, a string resultante desse item será retornad sem o uso do separador.
    
 
 // 1. 
