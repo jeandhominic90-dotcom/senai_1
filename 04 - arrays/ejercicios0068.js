@@ -380,10 +380,10 @@ function adicionar_Kowalski_idice_Padre_Ernan_Buco_Remova_GENéZio_iverter(){
 }
 
 function mostrarArreys(a){
-    document.getElementById('resultado').innerHTML=""
+    document.getElementById('listaProdutos').innerHTML=""
 
     for(let i = 0; i<a.length; i++){
-        document.getElementById('resultado').innerHTML += '<p>${a[i]}</p>'
+        document.getElementById('listaProdutos').innerHTML += '<p>${a[i]}</p>'
 
     }
 
