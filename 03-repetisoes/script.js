@@ -21,43 +21,43 @@
 // }
 // alert('total total:' + total + '\nQuantidade:' + qtd)
 
-function contagem(){
-let resultadoElemento = document.getElementById('resultados');
-let outro = "";
+function contagem() {
+    let resultadoElemento = document.getElementById('resultados');
+    let outro = "";
 
-for (let i = 10; i <= 1000; i++) {
-    
-    if ((i >= 10 && i <= 500) || (i >= 900 && i <= 1000)) {
-        if (outro === "") {
-            outro = i; 
-        } else {
-            outro = outro + ", " + i; 
+    for (let i = 10; i <= 1000; i++) {
+
+        if ((i >= 10 && i <= 500) || (i >= 900 && i <= 1000)) {
+            if (outro === "") {
+                outro = i;
+            } else {
+                outro = outro + ", " + i;
+            }
         }
     }
-}
 
 
-resultadoElemento.innerHTML = outro;
+    resultadoElemento.innerHTML = outro;
 }
 
 
 
 let resultado = document.getElementById('resultado')
 
-function ejercicio1(){
+function ejercicio1() {
     // eje1
-    resultado.innerHTML = 'parte 1, eje1 <br>' 
-let i = 0
-while(i<10){
-    i++
-    let quadrado = i*i
-    console.log(i + ': ' + quadrado) 
-    document.getElementById('resultado').innerHTML += i + ': ' + quadrado + '<br>'
-    
-}
+    resultado.innerHTML = 'parte 1, eje1 <br>'
+    let i = 0
+    while (i < 10) {
+        i++
+        let quadrado = i * i
+        console.log(i + ': ' + quadrado)
+        document.getElementById('resultado').innerHTML += i + ': ' + quadrado + '<br>'
+
+    }
 }
 
-function ejercicio2(){
+function ejercicio2() {
     // eje2
     resultado.innerHTML = 'parte 1, eje2 <br>'
     let i = 10
@@ -67,99 +67,99 @@ function ejercicio2(){
     }
 }
 
-function ejercicio3(){
-// eje3
-resultado.innerHTML = 'parte 1, eje3 <br>'
-let soma = 0
-let i = 1
-while(i <= 100){
-    soma += i
-    // resultado.innerHTML = i + ':' + soma + '<br>'
-    i++
-}
-    
-resultado.innerHTML = soma
-}
+function ejercicio3() {
+    // eje3
+    resultado.innerHTML = 'parte 1, eje3 <br>'
+    let soma = 0
+    let i = 1
+    while (i <= 100) {
+        soma += i
+        // resultado.innerHTML = i + ':' + soma + '<br>'
+        i++
+    }
 
-function ejercicio4(){
-   resultado.innerHTML= 'parte 1, eje4 <br>'
-   let i = 1
-   while(i <= 10){
-    let tabuada = i * 5
-    resultado.innerHTML += '5 X ' + i + ' = ' + tabuada + '<br>'
-    i++
-
-   }
+    resultado.innerHTML = soma
 }
 
-function ejercicio5(){
-let numero = Number(prompt("Digite o número para ver a tabuada:"));
-    
+function ejercicio4() {
+    resultado.innerHTML = 'parte 1, eje4 <br>'
+    let i = 1
+    while (i <= 10) {
+        let tabuada = i * 5
+        resultado.innerHTML += '5 X ' + i + ' = ' + tabuada + '<br>'
+        i++
+
+    }
+}
+
+function ejercicio5() {
+    let numero = Number(prompt("Digite o número para ver a tabuada:"));
+
     resultado.innerHTML = 'parte 1, eje5 <br>';
     let i = 1;
-    
-    while(i <= 10){
+
+    while (i <= 10) {
         let tabuada = i * numero;
         resultado.innerHTML += numero + ' X ' + i + ' = ' + tabuada + '<br>';
         i++;
     }
 }
 
-function ejercicio6(){
+function ejercicio6() {
     resultado.innerHTML = 'parte 1, eje6 <br>';
     let i = 1;
-    
-    while(i <= 20){
-        if(i % 2 !== 0){
+
+    while (i <= 20) {
+        if (i % 2 !== 0) {
             resultado.innerHTML += i + '<br>';
         }
         i++;
     }
 }
 
-function ejercicio7(){
+function ejercicio7() {
     resultado.innerHTML = 'parte 1, eje7 <br>';
-    
- 
+
+
     resultado.innerHTML += '<b>Crescente:</b><br>';
     let i = 1;
-    while(i <= 10){
+    while (i <= 10) {
         resultado.innerHTML += i + ' ';
         i++;
     }
-    
+
     resultado.innerHTML += '<br><br>';
-    
+
     e
     resultado.innerHTML += '<b>Decrescente:</b><br>';
     let j = 10;
-    while(j >= 1){
+    while (j >= 1) {
         resultado.innerHTML += j + ' ';
         j--;
     }
 }
 
 
-function ejercicio8(){
+function ejercicio8() {
     let numero = Number(prompt("Digite um número para calcular o fatorial:"));
     resultado.innerHTML = 'parte 1, eje8 <br>';
-    
+
     let fatorial = 1;
     let i = numero;
-    
-    while(i > 1){
+
+    while (i > 1) {
         fatorial *= i;
         i--;
     }
-    
+
     resultado.innerHTML += 'O fatorial é: ' + fatorial;
 }
 
-function ejercicio9(){
+function ejercicio9() {
     resultado.innerHTML = 'parte 1, eje9 <br>';
     let i = 1;
-    
-    while(i <= 100){
+
+    while (i <= 100) {
         if (i % 3 === 0 && i % 5 === 0) {
             resultado.innerHTML += 'FizzBuzz<br>';
         } else if (i % 3 === 0) {
@@ -173,122 +173,172 @@ function ejercicio9(){
     }
 }
 
-function ejercicio10(){
+function ejercicio10() {
     resultado.innerHTML = 'parte 1, eje10 <br>';
     let i = 1;
     let soma = 0;
-    
-    while(i <= 10){
+
+    while (i <= 10) {
         soma += 1 / i;
         i++;
     }
-    
+
     resultado.innerHTML += 'O valor total da série é: ' + soma.toFixed(2);
 }
 
 
-function ejercicio11(){
+function ejercicio11() {
     let limite = parseInt(prompt("Digite um número limite:"));
     resultado.innerHTML = 'parte 1, eje11 <br>';
-    
+
     let i = 1;
     let pares = 0;
     let impares = 0;
-    
-    while(i <= limite){
-        if(i % 2 === 0){
+
+    while (i <= limite) {
+        if (i % 2 === 0) {
             pares++;
         } else {
             impares++;
         }
         i++;
     }
-    
+
     resultado.innerHTML += 'Total de pares: ' + pares + '<br>';
     resultado.innerHTML += 'Total de ímpares: ' + impares;
 }
 
-function ejercicio12(){
+function ejercicio12() {
     // Exemplo com uma lista fixa de números
     let lista = [15, 8, 42, 4, 23, 16];
     resultado.innerHTML = 'parte 1, eje12 <br>';
-    
+
     let i = 0;
     let maior = lista[0];
     let menor = lista[0];
-    
-    while(i < lista.length){
-        if(lista[i] > maior){
+
+    while (i < lista.length) {
+        if (lista[i] > maior) {
             maior = lista[i];
         }
-        if(lista[i] < menor){
+        if (lista[i] < menor) {
             menor = lista[i];
         }
         i++;
     }
-    
+
     resultado.innerHTML += 'Lista: ' + lista.join(', ') + '<br>';
     resultado.innerHTML += 'Maior valor: ' + maior + '<br>';
     resultado.innerHTML += 'Menor valor: ' + menor;
 }
 
 
-function ejercicio13(){
+function ejercicio13() {
     let lista = [10, 20, 30, 40, 50];
     resultado.innerHTML = 'parte 1, eje13 <br>';
-    
+
     let i = 0;
     let soma = 0;
-    
-    while(i < lista.length){
+
+    while (i < lista.length) {
         soma += lista[i];
         i++;
     }
-    
+
     let media = soma / lista.length;
     resultado.innerHTML += 'Lista: ' + lista.join(', ') + '<br>';
     resultado.innerHTML += 'A média é: ' + media;
 }
 
-function ejercicio14(){
+function ejercicio14() {
     let numero = parseInt(prompt("Digite um número para verificar se é primo:"));
     resultado.innerHTML = 'parte 1, eje14 <br>';
-    
+
     let i = 1;
     let divisores = 0;
-    
-    while(i <= numero){
-        if(numero % i === 0){
+
+    while (i <= numero) {
+        if (numero % i === 0) {
             divisores++;
         }
         i++;
     }
-    
-    if(divisores === 2){
-        resultado.innerHTML += numero + ' é um número primo!';
+
+    if (divisores === 2) {
+        resultados.innerHTML += numero + ' é um número primo!';
     } else {
-        resultado.innerHTML += numero + ' NÃO é um número primo.';
+        resultados.innerHTML += numero + ' NÃO é um número primo.';
     }
 }
 
-function ejercicio15(){
+function ejercicio15() {
     resultado.innerHTML = 'parte 1, eje15 <br>';
     let num = 1;
-    
-    while(num <= 50){
+
+    while (num <= 50) {
         let divisores = 0;
         let i = 1;
-        
-        while(i <= num){
-            if(num % i === 0){
+
+        while (i <= num) {
+            if (num % i === 0) {
                 divisores++;
             }
             i++;
         }
-        
-        if(divisores === 2){
-            resultado.innerHTML += num + ' ';
+
+        if (divisores === 2) {
+            resultados.innerHTML += num + ' ';
         }
         num++;
     }
 }
+
+function eje1() {
+    resultado.innerHTML = ''
+    resultado.innerHTML = 'parte 2, eje1 <br>';
+    let palavra = prompt("Digite uma palavra")
+    let n = Number(prompt("Quantas vezes ?"))
+    for (let i = 0; i < n; i++) {
+        resultado.innerHTML += `<p>${palavra}</p>`
+    }
+}
+
+function eje2() {
+    resultado.innerHTML = ''
+    resultado.innerHTML = 'parte 2, eje2 <br>';
+    let soma = 0
+    let n = Number(prompt("Digite um numero"))
+    for (let i = 2; i <= n; i++) {
+        if (i % 2 == 0) {
+            soma += i
+            console.log(i);
+
+        }
+
+    }
+
+    resultado.innerHTML = soma
+}
+
+function eje3() {
+    let item = 'vazio'
+    resultado.innerHTML = ''
+    while (item != '0') {
+        itens = prompt('Digite um item para a lista')
+        if (item != '0') {
+            resultado.innerHTML += `<p>${item}</p>`
+        }
+
+
+    }
+}
+
+function eje4() {
+    resultado.innerHTML = ''
+    let n = Number(prompt("Digite um numero"))
+    for (let i = n; i <= 1; i--) {
+
+    }
+    resultado.innerHTML += n
+}
+
