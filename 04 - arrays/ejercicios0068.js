@@ -2,6 +2,7 @@ function adicionar(){
     const personagens = ["Lúcio Fernando", "Mônica", "Capitão Ganso"];
     personagens.push("Gill Bates")
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
     
 }
 
@@ -10,7 +11,7 @@ function adicionar_no_inicio(){
     personagens.unshift("Dona Bete")
 
     console.log(personagens);
-    
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function remover_ultimo(){
@@ -22,6 +23,7 @@ function remover_ultimo(){
     ];
     personagens.pop()
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function remover_primero() {
@@ -34,7 +36,7 @@ function remover_primero() {
 
     personagens.shift("Lúcio Fernando")
     console.log(personagens);
-    
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function remover_captao_ganso(){
@@ -50,6 +52,7 @@ function remover_captao_ganso(){
    personagens.splice(i, 1)
 
    console.log(personagens);
+     let divResultado = document.getElementById("listaProdutos");
    
     
 }
@@ -70,6 +73,7 @@ function remover_Gill_betes_junin() {
 
 
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
     
 }
 
@@ -95,7 +99,7 @@ function adicionar_inicio(){
 
     personagens.unshift("GENéZio" , "Kowalski")
     console.log(personagens);
-    
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function indicie_Waldisney(){
@@ -108,7 +112,7 @@ function indicie_Waldisney(){
 
     personagens.indexOf("Waldisney")
     console.log(personagens);
-    
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function verificar_se_esta_no_arrey(){
@@ -121,7 +125,7 @@ function verificar_se_esta_no_arrey(){
 
     personagens.includes("Heitor Tuga")
     console.log(personagens);
-    
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function inverter_arreys(){
@@ -134,6 +138,7 @@ function inverter_arreys(){
 
     personagens.reverse()
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
     
 }
 
@@ -148,6 +153,7 @@ function remover_junin(){
     personagens.splice(i , 1)
 
     console.log(personagens)
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function adicionar_final_2(){
@@ -177,6 +183,7 @@ function adicionar_final_2(){
     personagens.shift()
 
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
     
 
 }
@@ -190,7 +197,7 @@ function indicie_GENéZio(){
     ];
     personagens.indexOf("GENéZio")
     console.log(personagens);
-
+  let divResultado = document.getElementById("listaProdutos");
 }
 
 function verificar_Capitão_Ganso() {
@@ -208,6 +215,8 @@ function verificar_Capitão_Ganso() {
         console.log("fui embora");
         
     }
+
+      let divResultado = document.getElementById("listaProdutos");
    
 }
 
@@ -226,6 +235,7 @@ function remover_dois_primeiros(){
     personagens.splice(i , 1)
 
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
     
 }
 
@@ -246,7 +256,7 @@ i = personagens.indexOf("Peba")
 personagens.splice(i, 1)
 console.log(personagens);
 
-
+  let divResultado = document.getElementById("listaProdutos");
 
 }
 
@@ -261,6 +271,7 @@ function adicionar_inicio_final(){
     console.log(personagens);
     personagens.unshift("Lúcio Fernando")
     console.log(personagens)
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function inverter_arreys2(){
@@ -273,6 +284,7 @@ function inverter_arreys2(){
 
     personagens.reverse()
     console.log(personagens);
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function descubrir_se_bilu(){
@@ -290,6 +302,7 @@ function descubrir_se_bilu(){
         console.log("fui embora");
         
     }
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function descubrir_o_indice(){
@@ -302,7 +315,7 @@ function descubrir_o_indice(){
 
     personagens.indexOf("Padre Ernan Buco")
     console.log(personagens);
-    
+      let divResultado = document.getElementById("listaProdutos");
 }
 
 function remover_dois(){
@@ -321,7 +334,7 @@ function remover_dois(){
     i = personagens.splice(i , 1)
     console.log(personagens);
 
-
+  let divResultado = document.getElementById("listaProdutos");
 }
 
 function adicionar_Bilu_final_Dona_Bete_ini_remover_ultimo_inverter(){
@@ -344,7 +357,7 @@ function adicionar_Bilu_final_Dona_Bete_ini_remover_ultimo_inverter(){
 
     personagens.reverse()
     console.log('4: '+ personagens)
-
+  let divResultado = document.getElementById("listaProdutos");
 
 }
 
@@ -377,6 +390,7 @@ function adicionar_Kowalski_idice_Padre_Ernan_Buco_Remova_GENéZio_iverter(){
    personagens.reverse()
    console.log(personagens);
    
+     let divResultado = document.getElementById("listaProdutos");
 }
 
 function mostrarArreys(a){
